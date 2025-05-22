@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const open = ref(false)
 const loading = ref(false)
+const manualOpen = ref(false)
 
 function send() {
   loading.value = true
@@ -87,6 +88,21 @@ function send() {
           <div class="w-48 h-16" />
         </template>
       </UPopover>
+    </div>
+
+    <div class="mt-24">
+      <h1>Manual mode</h1>
+      <UPopover v-model:open="manualOpen" mode="manual" arrow :content="{ side: 'top' }" :dismissible="false">
+        <UButton label="Does not open" color="neutral" variant="outline" />
+
+        <template #content>
+          <div class="w-48 h-16" />
+        </template>
+      </UPopover>
+    </div>
+    <div class="mt-2">
+      <UButton label="Open it here" color="neutral" variant="outline" @click="manualOpen = true" />
+      <UButton label="Close it here" color="neutral" variant="outline" @click="manualOpen = false" />
     </div>
   </div>
 </template>

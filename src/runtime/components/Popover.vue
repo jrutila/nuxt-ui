@@ -11,7 +11,7 @@ export interface PopoverProps extends PopoverRootProps, Pick<HoverCardRootProps,
    * The display mode of the popover.
    * @defaultValue 'click'
    */
-  mode?: 'click' | 'hover'
+  mode?: 'click' | 'hover' | 'manual'
   /**
    * The content of the popover.
    * @defaultValue { side: 'bottom', sideOffset: 8, collisionPadding: 8 }
@@ -95,13 +95,14 @@ const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.ui?.popover || {
 }))
 
 const Component = computed(() => props.mode === 'hover' ? HoverCard : Popover)
+const TriggerComponent = computed(() => props.mode === 'manual' ? Popover.Anchor : Component.value.Trigger)
 </script>
 
 <template>
   <Component.Root v-slot="{ open }" v-bind="rootProps">
-    <Component.Trigger v-if="!!slots.default" as-child :class="props.class">
+    <TriggerComponent v-if="!!slots.default" as-child :class="props.class">
       <slot :open="open" />
-    </Component.Trigger>
+    </TriggerComponent>
 
     <Component.Portal v-bind="portalProps">
       <Component.Content v-bind="contentProps" :class="ui.content({ class: [!slots.default && props.class, props.ui?.content] })" v-on="contentEvents">

@@ -54,6 +54,45 @@ exports[`Popover > renders with default slot correctly 1`] = `
 <!--teleport end-->"
 `;
 
+exports[`Popover > renders with mode:click correctly 1`] = `
+"<!--v-if-->
+<!--teleport start-->
+
+
+<div data-reka-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div id="reka-popover-content-v-0-0-0" data-state="open" aria-labelledby="" style="--reka-popover-content-transform-origin: var(--reka-popper-transform-origin); --reka-popover-content-available-width: var(--reka-popper-available-width); --reka-popover-content-available-height: var(--reka-popper-available-height); --reka-popover-trigger-width: var(--reka-popper-anchor-width); --reka-popover-trigger-height: var(--reka-popper-anchor-height); animation: none;" role="dialog" data-dismissable-layer="" tabindex="-1" class="bg-default shadow-lg rounded-md ring ring-default data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-popover-content-transform-origin) focus:outline-none pointer-events-auto" data-side="bottom" data-align="center"></div>
+</div>
+
+
+<!--teleport end-->"
+`;
+
+exports[`Popover > renders with mode:hover correctly 1`] = `
+"<!--v-if-->
+<!--teleport start-->
+
+
+<div data-reka-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div data-state="open" style="--reka-hover-card-content-transform-origin: var(--reka-popper-transform-origin); --reka-hover-card-content-available-width: var(--reka-popper-available-width); --reka-hover-card-content-available-height: var(--reka-popper-available-height); --reka-hover-card-trigger-width: var(--reka-popper-anchor-width); --reka-hover-card-trigger-height: var(--reka-popper-anchor-height); animation: none;" data-dismissable-layer="" class="bg-default shadow-lg rounded-md ring ring-default data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-popover-content-transform-origin) focus:outline-none pointer-events-auto" data-side="bottom" data-align="center"></div>
+</div>
+
+
+<!--teleport end-->"
+`;
+
+exports[`Popover > renders with mode:manual correctly 1`] = `
+"<!--v-if-->
+<!--teleport start-->
+
+
+<div data-reka-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(0, -200%); min-width: max-content;">
+  <div id="reka-popover-content-v-0-0-0" data-state="open" aria-labelledby="" style="--reka-popover-content-transform-origin: var(--reka-popper-transform-origin); --reka-popover-content-available-width: var(--reka-popper-available-width); --reka-popover-content-available-height: var(--reka-popper-available-height); --reka-popover-trigger-width: var(--reka-popper-anchor-width); --reka-popover-trigger-height: var(--reka-popper-anchor-height); animation: none;" role="dialog" data-dismissable-layer="" tabindex="-1" class="bg-default shadow-lg rounded-md ring ring-default data-[state=open]:animate-[scale-in_100ms_ease-out] data-[state=closed]:animate-[scale-out_100ms_ease-in] origin-(--reka-popover-content-transform-origin) focus:outline-none pointer-events-auto" data-side="bottom" data-align="center"></div>
+</div>
+
+
+<!--teleport end-->"
+`;
+
 exports[`Popover > renders with open correctly 1`] = `
 "<!--v-if-->
 <!--teleport start-->
